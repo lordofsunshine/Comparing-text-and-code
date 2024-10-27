@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сравнение текста и кода</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Сравнение текста и кода</h1>
+      <div class="input-container">
+        <div class="input-wrapper">
+          <textarea id="input1" placeholder="Введите первый текст или код здесь"></textarea>
+        </div>
+        <div class="input-wrapper">
+          <textarea id="input2" placeholder="Введите второй текст или код здесь"></textarea>
+        </div>
+      </div>
+      <div class="controls">
+        <select id="diffType">
+          <option value="chars">Посимвольное сравнение</option>
+          <option value="words">Пословное сравнение</option>
+          <option value="lines">Построчное сравнение</option>
+        </select>
+        <button id="compareBtn">Сравнить</button>
+      </div>
+      <div class="output-container">
+        <div id="output1" class="output"></div>
+        <div id="output2" class="output"></div>
+      </div>
+      <div id="diffSummary" class="diff-summary"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff_match_patch/20121119/diff_match_patch.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
